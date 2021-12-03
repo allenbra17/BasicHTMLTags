@@ -1,0 +1,155 @@
+.wrapper {
+    background: url('https://i.pinimg.com/564x/f4/60/bc/f460bc86fcad6081edfc7ef8cff2168a.jpg')
+   
+}
+.outline{
+    width: 700px;
+    height: 500px;
+    border: solid 20px black;
+    border-radius: 50%;
+    background-color:yellow;
+    left: 22%;
+    position: relative;
+}
+
+
+.inner-back{
+    top: 13px;
+    left: 12px;
+    width: 675px;
+    height: 475px;
+    border-radius: 50%;
+    background-color:black;
+    position: relative;
+    z-index: 2;
+    vertical-align: middle;
+}
+
+.lefttop{
+    width: 220px;
+    height: 180px;
+    border: transparent;
+    border-radius: 50%;
+    background-color:yellow;
+    position: relative;
+    z-index: 2;
+    top: 15px;
+    left: 80px;
+    transform: rotate(30deg)
+  }
+
+.righttop {
+  width: 220px;
+  height: 180px;
+  border: transparent;
+  border-radius: 50%;
+  background-color:yellow;
+  position: relative;
+  z-index: 2;
+  top: -165px;
+  left: 375px;
+  transform: rotate(330deg)
+}
+
+.topleftmid {
+    width: 90px;
+    height: 140px;
+    border: transparent;
+    background-color:yellow;
+    position: relative;
+    z-index: 2;
+    top: -365px;
+    left: 204px;
+}
+
+.toprightmid {
+    width: 90px;
+    height: 140px;
+    border: transparent;
+    background-color:yellow;
+    position: relative;
+    z-index: 2;
+    top: -505px;
+    left: 381px;
+}
+
+.leftear {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 70px solid yellow;
+    top: -640px;
+    left: 290px;
+    position: relative;
+    z-index: 3;
+}
+
+.rightear {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 70px solid yellow;
+    top: -710px;
+    left: 335px;
+    position: relative;
+}
+
+.midear {
+    width: 44px;
+    height: 80px;
+    background-color: yellow;
+    top: -790px;
+    left: 316px;
+    position: relative;
+}
+
+.bottom {
+    width: 120px;
+    height: 240px;
+    border: transparent;
+    border-radius: 50%;
+    background-color:yellow;
+    position: relative;
+    z-index: 2;
+    top: -580px;
+    left: 130px;
+    transform: rotate(320deg)
+  }
+
+
+.b1 {
+    top: -600px;
+    left: 112px;
+    transform: rotate(325deg)
+}
+
+.b2 {
+    top: -830px;
+    left: 212px;
+    transform: rotate(342deg)
+}
+
+.b3 {
+    top: -1070px;
+    left: 337px;
+    transform: rotate(18deg)
+}
+
+.b4 {
+    top: -1320px;
+    left: 442px;
+    transform: rotate(35deg)
+}
+.outline2 {
+    width: 700px;
+    height: 500px;
+    border: solid 20px black;
+    border-radius: 50%;
+    background-color:transparent;
+    left: 22%;
+    top: -540px;
+    position: relative;
+    z-index: 3;
+}

@@ -1,0 +1,65 @@
+header {
+    text-align: center;
+    font-weight: 900;
+    font-family: cursive;
+    font-size: 60px;
+    margin-top: -20px;
+}
+
+body {
+    background-image: url('./assets/bricks.jpg');
+    overflow: hidden;
+}
+
+#tab1 {
+    text-align: center;
+    margin-right: auto ;
+    margin-left: auto;
+    width: 800px;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: solid black 4px;
+    line-height: 30px;
+    background-color: orange;
+    margin-top: -190px;
+}
+
+th {
+    font-size: 35px;
+}
+
+.pl {
+    width: 250px;
+    height: 250px;
+    margin-top: -60px;
+    margin-left: 10px;
+}
+
+.pp {
+    width: 250px;
+    height: 250px;
+    margin-left: 1090px;
+    margin-top: -180px;  
+}
+
+.bp {
+    width: 200px;
+    height: 350px;
+    margin-left: 880px;
+}
+
+.ll {
+    width: 200px;
+    height: 350px; 
+    object-fit: cover;
+    object-position: 20% 20%; 
+    margin-top: -270px;
+    margin-left: -1045px;
+}
+
+.hall {
+    width: 800px;
+    height: 410px; 
+    margin-left: 275px;
+    margin-top: -90px;
+}

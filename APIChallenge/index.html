@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Movies</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div>
+        <h1>My Movies</h1>
+        <br>
+        <form id="movie-search" action="post" onsubmit="return pickMovies();">        
+            <input type="date" name="startDate" id="start">
+            <input type="date" name="endDate" id="end">
+            <input type="text" name="genre" id="genre">
+            <button id="pickMovies">Show My Movies</button>
+        </form>
+        <div id="results">
+            <!-- Where the results will be displayed -->
+        </div>
+    </div>
+    
+
+    <script src="./scripts.js"></script>
+</body>
+</html>

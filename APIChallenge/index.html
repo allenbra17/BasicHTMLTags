@@ -11,11 +11,11 @@
     <div>
         <h1>My Movies</h1>
         <br>
-        <form id="movie-search" action="post" onsubmit="return pickMovies();">        
+        <form id="movie-search" onsubmit="return pickMovies();">        
             <input type="date" name="startDate" id="start">
             <input type="date" name="endDate" id="end">
             <input type="text" name="genre" id="genre">
-            <button id="pickMovies">Show My Movies</button>
+            <input type="submit" id="pickMovies">
         </form>
         <div id="results">
             <!-- Where the results will be displayed -->

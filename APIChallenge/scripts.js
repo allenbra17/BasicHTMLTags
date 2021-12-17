@@ -1,4 +1,4 @@
-Permissions: interest-cohort();
+
 const baseURL = "https://imdb-api.com/API/AdvancedSearch";
 const APIKey = "k_d0n70ap7";
 let resultsElement = document.getElementById('results');

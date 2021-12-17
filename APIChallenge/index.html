@@ -11,9 +11,9 @@
     <div>
         <h1>My Movies</h1>
         <br>
-        <form id="movie-search" onsubmit="return pickMovies();">        
-            <input type="date" name="startDate" id="start">
-            <input type="date" name="endDate" id="end">
+        <form id="movie-search" onsubmit="pickMovies(startDate, endDate, genre);">        
+            <input type="date" name="startDate" id="startDate">
+            <input type="date" name="endDate" id="endDate">
             <input type="text" name="genre" id="genre">
             <input type="submit" id="pickMovies">
         </form>

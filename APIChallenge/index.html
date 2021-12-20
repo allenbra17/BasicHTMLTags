@@ -11,11 +11,11 @@
     <div>
         <h1>My Movies</h1>
         <br>
-        <form id="movie-search" onsubmit="pickMovies(startDate, endDate, genre);">        
-            <input type="date" name="startDate" id="startDate">
-            <input type="date" name="endDate" id="endDate">
-            <input type="text" name="genre" id="genre">
-            <input type="submit" id="pickMovies">
+        <form id="movie-search" >        
+            <input type="date" class="startDate">
+            <input type="date" class="endDate">
+            <input type="text" class="genre">
+            <button class="submit">Find my Movies!</button>
         </form>
         <div id="results">
             <!-- Where the results will be displayed -->
@@ -26,3 +26,5 @@
     <script src="./scripts.js"></script>
 </body>
 </html>
+
+<!-- onsubmit="pickMovies(startDate, endDate, genre);" -->

@@ -1,53 +1,91 @@
 
+
 const baseURL = "https://imdb-api.com/API/AdvancedSearch";
 const APIKey = "k_d0n70ap7";
 let resultsElement = document.getElementById('results');
 let buttonElement = document.getElementById('pickMovies');
-let formElement = document.getElementById('movie-search');
-const startDate = document.querySelector('.startDate');
-const endDate = document.querySelector('.endDate');
-const genre = document.querySelector('.genre');
+let tableElement = document.getElementById('genreSearch');
 
 
-// function movieData(movie, poster, rating) {
-//     Clear previous results
-//     resultsElement.innerHTML = '';
-//     let movieTitle = document.createElement('p');
-//     let moviePoster = document.createElement('p');
-//     let imDbRating = document.createElement('p');
+buttonElement.addEventListener('click', (event) => {
+    event.preventDefault();
+    fetchResults();
+    return false;
+})
 
-//     movieTitle.innerText = movie;
-//     moviePoster.innerText = poster;
-//     imDbRating.innerText = rating;
+ function movieData(movie, poster, rating) {
+     let movieTitle = document.createElement('p');
+     let imDbRating = document.createElement('p');
+     let moviePoster = document.createElement('img');
 
-//     resultsElement.appendChild(movieTitle);
-//     resultsElement.appendChild(moviePoster);
-//     resultsElement.appendChild(imDbRating);
-// }
+     movieTitle.innerText = movie;
+     moviePoster.src = poster;
+     imDbRating.innerText = rating;
 
-function fetchResults(e) {
-    e.preventDefault();
-    let url =`${ baseURL.value }/${ APIKey }?release_date${ startDate.value },${ endDate }&genres=${ genre.value }`;
-    console.log(url);
-    fetch(url)
-    .then(response => response.json())
-    .then(jsonData => {
-        console.log(jsonData);
-        // let movie = jsonData.results.title;
-        // let poster = jsonData.results.image;
-        // let rating = jsonData.results.imDbrating;
+     resultsElement.appendChild(movieTitle);
+     resultsElement.appendChild(imDbRating);
+     resultsElement.appendChild(moviePoster);
+ }
 
-        // movieData(movie, poster, rating);
-    })
+ function getChecked() {
+    //Create an Array.
+    let genres = [];
+        //Reference the Table.
+        let genreSearch = document.getElementById("genreSearch");
+
+        //Reference all the CheckBoxes in Table.
+        let checks = genreSearch.getElementsByTagName("input");
+
+        // Loop and push the checked CheckBox value in Array.
+        for (var i = 0; i < checks.length; i++) {
+            if (checks[i].checked) {
+                genres.push(checks[i].value);
+            }
+        };
+    } 
+let genres = [];
+    let genre = document.querySelector('.input').value;
+    genres.push(genre)
+    genres.join(',');
+    alert(genres);
+ 
+
+function toggle(checkAll) {
+    var boxes = document.querySelectorAll('input[type="checkbox"]');
+    for (var i = 0; i < boxes.length; i++) {
+        if (boxes[i] != checkAll)
+            boxes[i].checked = checkAll.checked;
+    }
 }
-// function fetchMovie() {
-//     let startDate = new FormData(start);
-//     let endDate = new FormData(end);
-//     let genre = new FormData(genre);
-// }
 
-// buttonElement.addEventListener('submit', () => {
-//     console.log(startDate,endDate, genre)
+function fetchResults() {
+    // let startDate = document.querySelector('.startDate').value;
+    // let endDate = document.querySelector('.endDate').value;
+
+    var usp = new URLSearchParams();
+    var checkedBoxes = genreSearch.querySelectorAll('input[type="checkbox"]:checked');
     
-//     pickMovies(startDate, endDate, genre)
-// })
+        var values = Array.from
+        (checkedBoxes, cb=>cb.name).join(',');
+        var genre = checkedBoxes.value;
+        usp.append(genre,values);
+
+    let url = new URL(baseURL + '/' + APIKey);
+    // url.searchParams.set('release_date', startDate + ',' + endDate);
+    url.searchParams.set( 'title_type', "feature")
+    // url.searchParams.set( 'genres' , genres.values );
+    url.searchParams.set( 'groups', "bottom_100")
+    url.searchParams.set( 'count', 100 )
+    fetch(url)
+    .then(function(response) { return response.json(); })
+    .then(function(json) {
+        console.log(json.results);
+        resultsElement.innerHTML = '';
+        json.results.forEach( (res) => {
+           let movie = res.title;
+           let rating = res.imDbRating;
+           let poster = res.image;
+           movieData(movie, poster, rating);
+        })
+});
+}

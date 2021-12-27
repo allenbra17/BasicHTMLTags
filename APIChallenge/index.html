@@ -14,81 +14,110 @@
             <!-- <input type="date" class="startDate">
             <input type="date" class="endDate"> -->
             <!-- <input type="text" class="input"> -->
+        <form action=""></form>
             <table id="genreSearch">
                 <tr>
                     <td>
-                        <input id=g1 type=checkbox class=input value=action>
+                        <input id=g1 type="radio" name=input value=action>
                         <label>Action</label>
                     <td>
-                        <input id=g2 type=checkbox class=input value=adventure>
+                        <input id=g2 type="radio" name=input value=adventure>
                         <label>Adventure</label>
                     <td>
-                        <input id=g3 type=checkbox class=input value=animation>
+                        <input id=g3 type="radio" name=input value=animation>
                         <label>Animation</label>
                     <td>
-                        <input id=g4 type=checkbox class=input value=biography>
+                        <input id=g4 type="radio" name=input value=biography>
                         <label>Biography</label>
                     <td>
-                        <input id=g5 type=checkbox class=input value=comedy>
+                        <input id=g5 type="radio" name=input value=comedy>
                         <label>Comedy</label>
                     <td>
-                        <input id=g6 type=checkbox class=input value=crime>
+                        <input id=g6 type="radio" name=input value=crime>
                         <label>Crime</label>
                     <td>
-                        <input id=g7 type=checkbox class=input value=documentary>
+                        <input id=g7 type="radio" name=input value=documentary>
                         <label>Documentary</label>
                 </tr>
                 
                 <tr>
                     <td>
-                        <input id=g8 type=checkbox class=input value=drama>
+                        <input id=g8 type="radio" name=input value=drama>
                         <label>Drama</label>
                     <td>
-                        <input id=g9 type=checkbox class=input value=family>
+                        <input id=g9 type="radio" name=input value=family>
                         <label>Family</label>
                     <td>
-                        <input id=g10 type=checkbox class=input value=fantasy>
+                        <input id=g10 type="radio" name=input value=fantasy>
                         <label>Fantasy</label>
                     <td>
-                        <input id=g11 type=checkbox class=input value=film_noir>
+                        <input id=g11 type="radio" name=input value=film_noir>
                         <label>Film-Noir</label>
                     <td>
-                        <input id=g12 type=checkbox class=input value=history>
+                        <input id=g12 type="radio" name=input value=history>
                         <label>History</label>
                     <td>
-                        <input id=g13 type=checkbox class=input value=horror>
+                        <input id=g13 type="radio" name=input value=horror>
                         <label>Horror</label>
                     <td>
-                        <input id=g14 type=checkbox class=input value=musical>
+                        <input id=g14 type="radio" name=input value=musical>
                         <label>Musical</label>
                 </tr>
             
                 <tr>
                     <td>
-                        <input id=g15 type=checkbox class=input value=mystery>
+                        <input id=g15 type="radio" name=input value=mystery>
                         <label>Mystery</label>
                     <td>
-                        <input id=g16 type=checkbox class=input value=romance>
+                        <input id=g16 type="radio" name=input value=romance>
                         <label>Romance</label>
                     <td>
-                        <input id=17 type=checkbox class=input value=sci_fi>
+                        <input id=17 type="radio" name=input value=sci_fi>
                         <label>Sci-Fi</label>
                     <td>
-                        <input id=g18 type=checkbox class=input value=sport>
+                        <input id=g18 type="radio" name=input value=sport>
                         <label>Sport</label>
                     <td>
-                        <input id=g19 type=checkbox class=input value=thriller>
+                        <input id=g19 type="radio" name=input value=thriller>
                         <label>Thriller</label>
                     <td>
-                        <input id=g20 type=checkbox class=input value=war>
+                        <input id=g20 type="radio" name=input value=war>
                         <label>War</label>
                     <td>
-                        <input id=g21 type=checkbox class=input value=western>
+                        <input id=g21 type="radio" name=input value=western>
                         <label>Western</label>
                 </tr>
             </table>
-            <input type = "button" id = "pickMovies" value = "Get"/>
-            <input type="checkbox" onclick="toggle(this);" />Check all?
+
+            <!-- <div id="genreDrop">
+                <button onclick="dropdown()" id="button">Choose a Genre</button>
+                <div id="genreList">
+                  <a class="genre" href="#home">Action</a>
+                  <a class="genre"href="#about">Adventure</a>
+                  <a class="genre"href="#contact">Animation</a>
+                  <a class="genre"href="#home">Biography</a>
+                  <a class="genre"href="#about">Comedy</a>
+                  <a class="genre"href="#contact">Crime</a>
+                  <a class="genre"href="#home">Documentary</a>
+                  <a class="genre"href="#about">Drama</a>
+                  <a class="genre"href="#contact">Family</a>
+                  <a class="genre"href="#home">Fantasy</a>
+                  <a class="genre"href="#about">Film-Noir</a>
+                  <a class="genre"href="#contact">History</a>
+                  <a class="genre"href="#home">Horror</a>
+                  <a class="genre"href="#about">Musical</a>
+                  <a class="genre"href="#contact">Mystery</a>
+                  <a class="genre"href="#home">Romance</a>
+                  <a class="genre"href="#about">Sci-Fi</a>
+                  <a class="genre"href="#contact">Sport</a>
+                  <a class="genre"href="#contact">Thriller</a>
+                  <a class="genre"href="#home">War</a>
+                  <a class="genre"href="#about">Western</a>
+                </div>
+              </div> -->
+
+            <input type = "button" id = "pickMovies" value = "Get" onclick = "getChecked()"/>
+            <!-- <input type="checkbox" onclick="toggle(this);" />Check all? -->
 
         <div id="results">
             <!-- Where the results will be displayed -->
@@ -96,6 +125,6 @@
     </div>
    
 
-    <script src="./scripts.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

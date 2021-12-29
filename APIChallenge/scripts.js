@@ -12,7 +12,8 @@ buttonElement.addEventListener('click', (event) => {
 })
 
  function movieData(movie, poster, rating) {
-     let movieCard =document.createElement('div')
+     //Create movie cards
+     let movieCard = document.createElement('section')
      let movieTitle = document.createElement('h3');
      let imDbRating = document.createElement('h4');
      let moviePoster = document.createElement('img');
@@ -20,13 +21,11 @@ buttonElement.addEventListener('click', (event) => {
      movieTitle.innerText = movie;
      imDbRating.innerText = rating;
      moviePoster.src = poster;
-
-     resultsElement.appendChild(movieCard);
+    //add stuff to cards
      movieCard.appendChild(movieTitle);
      movieCard.appendChild(imDbRating);
      movieCard.appendChild(moviePoster);
-
- 
+     resultsElement.appendChild(movieCard);
  }
 
 //  function toggle(checkAll) {
@@ -47,7 +46,6 @@ function getChecked() {
                 genres.push(checks[i].value);
             }
         };
-
         return genres;
     } 
 
@@ -60,12 +58,12 @@ function fetchResults() {
 //    url.searchParams.set('release_date', startDate + ',' + endDate);
     url.searchParams.set( 'title_type', "feature")
     url.searchParams.set('genres', getChecked())
-    // url.searchParams.set('groups', "bottom_1000")
+    url.searchParams.set('countries', 'us')
     url.searchParams.set('count', '100' )
     url.searchParams.set('sort', 'user_rating,asc')
     
     let decoded = decodeURIComponent(url)
-    alert(decoded)
+    // alert(decoded)
     fetch(decoded)
     
     .then(function(response) { return response.json(); })
@@ -74,8 +72,9 @@ function fetchResults() {
         results.innerHTML = '';
         // clear previous results
         json.results.forEach( (res) => {
+            let userRating = "User Rating:    "
             let movie = res.title;
-            let rating = res.imDbRating;
+            let rating = userRating + res.imDbRating;
             let poster = res.image;
         //    pull results from JSON
            movieData(movie, poster, rating);

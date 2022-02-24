@@ -1,1 +1,0 @@
-console.log('https://imdb-api.com/API/AdvancedSearch/k_d0n70ap7?release_date=1900-01-01,1980-01-01&genres=horror');

@@ -1,4 +1,7 @@
 .wrapper {
+    margin: auto;    
+    height: 97vh;
+    width:99vh;
     background: url('https://i.pinimg.com/564x/f4/60/bc/f460bc86fcad6081edfc7ef8cff2168a.jpg')
    
 }
@@ -8,7 +11,6 @@
     border: solid 20px black;
     border-radius: 50%;
     background-color:yellow;
-    left: 22%;
     position: relative;
 }
 
@@ -22,7 +24,6 @@
     background-color:black;
     position: relative;
     z-index: 2;
-    vertical-align: middle;
 }
 
 .lefttop{
@@ -148,7 +149,6 @@
     border: solid 20px black;
     border-radius: 50%;
     background-color:transparent;
-    left: 22%;
     top: -540px;
     position: relative;
     z-index: 3;

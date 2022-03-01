@@ -1,0 +1,16 @@
+#piePic {
+    height: 75px;
+    width: 75px;
+}
+
+#logout {
+    height: 75px;
+    width: 75px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lightgray;
+}

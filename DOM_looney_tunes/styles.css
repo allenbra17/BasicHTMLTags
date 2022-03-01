@@ -1,0 +1,127 @@
+/* GENERAL SETUP */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 14px;
+    /* overflow: scroll; */
+}
+
+/* body {
+
+} */
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+/* FONTS */
+
+@font-face {
+    font-family: thatsFontFolks;
+    src: url('./assets/thats_font_folks.ttf');
+}
+
+@font-face {
+    font-family: disneyFamily;
+    src: url('./assets/disney_family.ttf');
+}
+
+
+/* HEADER */
+
+#header {
+    margin-bottom: 1em;
+}
+
+.bg-dark {
+    background-color: black!important;
+}
+
+.headerImage {
+    background-image: url('./assets/background.png');
+    background-color: black; /* used if image unavailable */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 40vh;
+
+    font-family: thatsFontFolks;
+    text-align: center;
+    color: white;
+}
+
+.headerText {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.headerText h1 {
+    font-size: 4rem
+}
+
+/* BODY */
+
+main .container .row {
+    display: flex;
+    justify-content: center;
+}
+
+.card-img-top {
+    height: 200px
+}
+
+/* RACE */
+
+#race {
+    border: none;
+    width: 75px;
+    font-family: thatsFontFolks;
+    font-size: 1.8rem;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+.coyote {
+    height: auto;
+    width: 450px;
+    position: relative;
+    left: -60px;
+    background: none;
+}
+
+.runner {
+    height: auto;
+    width: 275px;
+    position: relative;
+    left: 15px;
+}
+
+@keyframes go-coyote { 
+    20% { left: 20%; } 
+    40%  { left: 30%; }
+    60%  { left: 40%; }
+    80%  { left: 60%; }
+    100% { left: 75%; }
+}
+@keyframes go-runner {
+	20%  { left: 20%; }
+	40%  { left: 30%; }
+	60%  { left: 40%; }
+	80%  { left: 60%; }
+	100% { left: 80%; }
+}
+
+/* FOOTER */
+
+#footer {
+    background-color: #f46e19;
+}

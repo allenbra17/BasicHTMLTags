@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <section id="header">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img onclick='playAudio()' src="./assets/lt.png" width="50" height="50" alt="" loading="lazy">
+                <audio id="myAudio">
+                    <source src="./assets/thats-all-folks.mp3" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+            </a>
+        </nav>
+
+        <div class="headerImage">
+            <div class="headerText">
+                <h1>Television Shows</h1>
+            </div>
+        </div>
+    </section>
+
+    <section id="body">
+        <main>
+            <div class="container">
+                <div class="row">
+                   
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <hr>
+
+    <section id="extra" style="margin-top: 2em">
+        <div style='text-align: center;'>
+            <button id="race">Race!</button>
+        </div>
+
+        <div>
+            <img src="./assets/wile-e.png" alt="wile-e coyote" class="coyote">
+        </div>
+
+        <div>
+            <img src="./assets/roadRunner.png" alt="road runner" class="runner">
+        </div>
+    </section>
+
+    <section id="footer">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Active</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+        </ul>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
+
+</html>
